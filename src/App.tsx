@@ -3,17 +3,19 @@ import './App.css';
 import {TaskType, Todolist} from "./Todolist";
 
 export type FilterValuesType = 'all' | 'completed' | 'active'
-function App() {
-    const shapka = '111 what to learn 111'
 
-     let [tasks, setTasks2] = useState< Array<TaskType> >([
+function App() {
+    const shapka = 'what to learn'
+
+    let [tasks, setTasks2] = useState<Array<TaskType>>([
         {id: 1, title: "HTML&CSS", isDone: true},
         {id: 2, title: "JS", isDone: true},
         {id: 3, title: "ReactJS", isDone: false}
     ])
-    let[filter, setFilter] = useState<FilterValuesType>('all')
+    let [filter, setFilter] = useState<FilterValuesType>('all')
+
     const remuveTask = (id: number) => {
-         let filteredTasks1 = tasks.filter(t => t.id !== id)
+        let filteredTasks1 = tasks.filter(t => t.id !== id)
         setTasks2(filteredTasks1)
     }
 
@@ -23,10 +25,10 @@ function App() {
 
     let filteredTasks = tasks
     if (filter === 'completed') {
-        filteredTasks = tasks.filter( t => t.isDone === true )
+        filteredTasks = tasks.filter(t => t.isDone === true)
     }
     if (filter === 'active') {
-        filteredTasks = tasks.filter( t => t.isDone === false )
+        filteredTasks = tasks.filter(t => t.isDone === false)
     }
 
     //  type filterButtonNameType = 'ALL'| 'Active'| 'Completed'

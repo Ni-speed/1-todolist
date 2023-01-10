@@ -1,7 +1,6 @@
 import React, {useState} from "react";
 import {FilterValuesType} from "./App";
 
-
 export type TodolistPropsType = {
     shapka?: string;
     tasks: TaskType[]
@@ -17,7 +16,9 @@ export type TaskType = {
 
 }
 export const Todolist = (props: TodolistPropsType) => {
-       return (
+
+
+    return (
         <div>
             <h3>{props.shapka}</h3>
             <div>
